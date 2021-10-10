@@ -13,3 +13,6 @@ pip install opencv-python nltk plotly bokeh seaborn imageio
   * We are only taking the first 3 training splits (~25%) as our training data.
   * Checkout `data_reformatting/vist_demo.ipynb` for a detailed demo
   * The re-formatted stories are saved in `data_reformatting/stories_jsons`
+
+### Linguistic Analysis
+  * The jupyter notebook in the linguistic_analysis sub-folder contains all the code for linguistic analysis.
