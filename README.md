@@ -14,5 +14,9 @@ pip install opencv-python nltk plotly bokeh seaborn imageio
   * Checkout `data_reformatting/vist_demo.ipynb` for a detailed demo
   * The re-formatted stories are saved in `data_reformatting/stories_jsons`
 
+### Embeddings Visualization
+  * Checkout `embeddings_visualization/BERT_visualizations.ipynb` for t-SNE analysis of stories and captions.
+  * The sub-folder `embeddings_visualization` also has high-quality visualizations of t-SNE components for words, contextualized words and sentence representations.
+
 ### Linguistic Analysis
   * The jupyter notebook in the linguistic_analysis sub-folder contains all the code for linguistic analysis.
