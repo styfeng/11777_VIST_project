@@ -21,6 +21,6 @@ pip install opencv-python nltk plotly bokeh seaborn imageio
 ### Linguistic Analysis
   * The jupyter notebook in the linguistic_analysis sub-folder contains all the code for linguistic analysis.
 
-### uniModelVis
+### uniModalVis
   * vis_visualization.ipynb includes the visual analysis of the VIST data
   * qualitative, quantitative folder contains visual analysis results (figures)
