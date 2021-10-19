@@ -10,9 +10,9 @@ pip install opencv-python nltk plotly bokeh seaborn imageio
 ```
 
 ### Data Re-Formatting
-  * We are only taking the first 3 training splits (~25%) as our training data.
+  * We are only taking the first 5 training splits and retaining 10k-train/3k-val/3k-test stories, which also have captions for all their corresponding images. This split accounts for approximately 25%/60%/60% of entire training/validation/test data.
   * Checkout `data_reformatting/vist_demo.ipynb` for a detailed demo
-  * The re-formatted stories are saved in `data_reformatting/stories_jsons`
+  * The re-formatted 10k-train/3k-val/3k-test stories with captions are saved in `data_reformatting/stories_withcaptions_jsons`
 
 ### Embeddings Visualization
   * Checkout `embeddings_visualization/BERT_visualizations.ipynb` for t-SNE analysis of stories and captions.
