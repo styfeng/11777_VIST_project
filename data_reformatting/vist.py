@@ -131,6 +131,9 @@ class Story_in_Sequence:
         story_ids = list(self.Stories.keys())
         num_stories = 0
         for story_id in story_ids:
+            if max_stories is not None and num_stories == max_stories:
+                del self.Stories[story_id]
+                continue
             story = self.Stories[story_id]
             sent_ids = story['sent_ids']
             album = self.Albums[story['album_id']]
@@ -149,8 +152,8 @@ class Story_in_Sequence:
                 del self.Stories[story_id]
             else:
                 num_stories += 1
-            if max_stories is not None and num_stories == max_stories:
-                print(f'Reached max number of stories: {max_stories}'); break
+        if max_stories is not None and num_stories == max_stories:
+            print(f'Reached max number of stories: {max_stories}')
         if retain_all_captions: print(f'Retained {num_stories}/{len(story_ids)} stories with captions.')
         else: print(f'Retained {num_stories}/{len(story_ids)} stories.')
 
