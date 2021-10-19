@@ -2,6 +2,7 @@ import os.path as osp
 import json
 import numpy as np
 import math
+import glob
 from collections import defaultdict
 from datetime import datetime
 from pprint import pprint
@@ -10,7 +11,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 class Story_in_Sequence:
-    def __init__(self, images_dir, annotations_dir, splits=None):
+    def __init__(self, images_dir, annotations_dir, splits=None, retain_all_captions=False, max_stories=None):
         """
         The vist_dir should contain images and annotations, which further contain train/val/test.
         We will load train/val/test together on default and add split in albums, and make mapping.
@@ -116,7 +117,7 @@ class Story_in_Sequence:
         print('Mapping for [Albums][Images][Stories][Sents] done.')
 
         # fix data dictionaries by removing non-exisiting albums and stories
-        self.fix_data_dicts()
+        self.fix_data_dicts(retain_all_captions, max_stories)
 
         # back to albums, images, stories, sents, 
         self.albums = list(self.Albums.values())
@@ -126,10 +127,13 @@ class Story_in_Sequence:
         self.captions = list(self.Captions.values())
 
 
-    def fix_data_dicts(self):
+    def fix_data_dicts(self, retain_all_captions=False, max_stories=None):
         story_ids = list(self.Stories.keys())
         num_stories = 0
         for story_id in story_ids:
+            if max_stories is not None and num_stories == max_stories:
+                del self.Stories[story_id]
+                continue
             story = self.Stories[story_id]
             sent_ids = story['sent_ids']
             album = self.Albums[story['album_id']]
@@ -138,7 +142,7 @@ class Story_in_Sequence:
                 img_id = self.Sents[sent_id]['img_id']
                 img_file = osp.join(self.images_dir, album['split'], img_id + '.jpg')
                 if not osp.isfile(img_file): bad_sent_ids.append(sent_id); bad_img_ids.append(img_id)
-            if bad_sent_ids:
+            if bad_sent_ids or (retain_all_captions and not all(story['captions'])):
                 # for sent_id in bad_sent_ids: del self.Sents[sent_id]
                 # for img_id in bad_img_ids:
                 #     if img_id in self.Images: del self.Images[img_id]
@@ -148,7 +152,10 @@ class Story_in_Sequence:
                 del self.Stories[story_id]
             else:
                 num_stories += 1
-        print(f'Retained {num_stories}/{len(story_ids)} stories.')
+        if max_stories is not None and num_stories == max_stories:
+            print(f'Reached max number of stories: {max_stories}')
+        if retain_all_captions: print(f'Retained {num_stories}/{len(story_ids)} stories with captions.')
+        else: print(f'Retained {num_stories}/{len(story_ids)} stories.')
 
     def read_img(self, img_file):
         img_content = imread(img_file)
