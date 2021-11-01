@@ -24,6 +24,9 @@ pip install opencv-python nltk plotly bokeh seaborn imageio
 ### Evaluation
   * The evaluation sub-folder contains scripts for certain metrics including BERTScore (between two .txt files, one example per line), and perplexity using GPT-2 (of text in a single .txt file, one example per line).
   
+### Baseline: AREL
+  * The reimplementation of AREL baseline with our 25% subset of training split is provided in `baseline_reimplementations/AREL`. Experiments of stage 1 and 2 using XE and AREL optimizations are present in its directories: `data/save/777_XE` and `data/save/777_AREL` respectively.
+
 ### Baseline Generations and Results
   * The baseline_generations_results subfolder contains generations and metric results using the baseline models (AREL and GLAC Net) on our subset of the VIST test split. The images_midterm subsubfolder contains the images corresponding to the qualitative examples in our midterm report.
   
