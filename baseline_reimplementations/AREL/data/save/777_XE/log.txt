@@ -1,0 +1,64 @@
+10-25 07:17 INFO     Tensorflow not installed; No tensorboard logging.
+10-25 07:17 INFO     Option settings:
+10-25 07:17 INFO     grad_clip                               : 10
+10-25 07:17 INFO     conv_feat_size                          : 100352
+10-25 07:17 INFO     shuffle                                 : True
+10-25 07:17 INFO     scheduled_sampling_max_prob             : 0.25
+10-25 07:17 INFO     decoding_method_DISC                    : sample
+10-25 07:17 INFO     use_feature_with_context                : False
+10-25 07:17 INFO     scheduled_sampling_increase_every       : 5
+10-25 07:17 INFO     rl_weight                               : 0.5
+10-25 07:17 INFO     start_from_model                        : data/save/777_XE/model-best.pth
+10-25 07:17 INFO     use_conv                                : False
+10-25 07:17 INFO     scheduled_sampling_increase_prob        : 0.05
+10-25 07:17 INFO     visual_dropout                          : 0.2
+10-25 07:17 INFO     full_story_h5                           : VIST/full_story.h5
+10-25 07:17 INFO     num_layers                              : 1
+10-25 07:17 INFO     max_epochs                              : 100
+10-25 07:17 INFO     word_embed_dim                          : 512
+10-25 07:17 INFO     id                                      : 777_XE
+10-25 07:17 INFO     metric                                  : METEOR
+10-25 07:17 INFO     scheduled_sampling_start                : 0
+10-25 07:17 INFO     weight_decay                            : 0
+10-25 07:17 INFO     data_dir                                : ../DATADIR
+10-25 07:17 INFO     learning_rate_decay_every               : 5
+10-25 07:17 INFO     workers                                 : 3
+10-25 07:17 INFO     resume_from                             : None
+10-25 07:17 INFO     learning_rate                           : 0.0004
+10-25 07:17 INFO     reward_type                             : METEOR
+10-25 07:17 INFO     activation                              : sign
+10-25 07:17 INFO     G_iter                                  : 100
+10-25 07:17 INFO     load_best_score                         : True
+10-25 07:17 INFO     rnn_type                                : gru
+10-25 07:17 INFO     momentum                                : 0.9
+10-25 07:17 INFO     story_h5                                : VIST/story.h5
+10-25 07:17 INFO     option                                  : test
+10-25 07:17 INFO     optim                                   : Adam
+10-25 07:17 INFO     story_line_json                         : VIST/story_line.json
+10-25 07:17 INFO     batch_size                              : 128
+10-25 07:17 INFO     D_iter                                  : 100
+10-25 07:17 INFO     checkpoint_path                         : data/save
+10-25 07:17 INFO     start_rl                                : -1
+10-25 07:17 INFO     losses_log_every                        : 10
+10-25 07:17 INFO     learning_rate_decay_rate                : 0.5
+10-25 07:17 INFO     dropout                                 : 0.5
+10-25 07:17 INFO     story_size                              : 5
+10-25 07:17 INFO     task                                    : story_telling
+10-25 07:17 INFO     optim_beta                              : 0.999
+10-25 07:17 INFO     learning_rate_decay_start               : -1
+10-25 07:17 INFO     save_checkpoint_every                   : 250
+10-25 07:17 INFO     cached_tokens                           : VIST/VIST-train-words
+10-25 07:17 INFO     prefix                                  : fc/
+10-25 07:17 INFO     optim_alpha                             : 0.8
+10-25 07:17 INFO     beam_size                               : 1
+10-25 07:17 INFO     with_position                           : False
+10-25 07:17 INFO     desc_h5                                 : VIST/description.h5
+10-25 07:17 INFO     hidden_dim                              : 512
+10-25 07:17 INFO     always                                  : None
+10-25 07:17 INFO     debug                                   : False
+10-25 07:17 INFO     model                                   : BaseModel
+10-25 07:17 INFO     optim_epsilon                           : 1e-08
+10-25 07:17 INFO     feat_size                               : 2048
+10-25 07:17 INFO     Initialize the parameters of the model
+10-25 07:17 INFO     Start from pretrained model
+10-25 07:18 INFO     Evaluating...
