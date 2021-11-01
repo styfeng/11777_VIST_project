@@ -19,8 +19,14 @@ pip install opencv-python nltk plotly bokeh seaborn imageio
   * The sub-folder `embeddings_visualization` also has high-quality visualizations of t-SNE components for words, contextualized words and sentence representations.
 
 ### Linguistic Analysis
-  * The jupyter notebook in the linguistic_analysis sub-folder contains all the code for linguistic analysis.
+  * The jupyter notebook in the linguistic_analysis sub-folder contains all the code for linguistic analysis for both assignments 2 and 3.
 
+### Evaluation
+  * The evaluation sub-folder contains scripts for certain metrics including BERTScore (between two .txt files, one example per line), and perplexity using GPT-2 (of text in a single .txt file, one example per line).
+  
+  # Baseline Generations and Results
+  * The baseline_generations_results subfolder contains generations and metric results using the baseline models (AREL and GLAC Net) on our subset of the VIST test split. The images_midterm subsubfolder contains the images corresponding to the qualitative examples in our midterm report.
+  
 ### uniModalVis
   * vis_visualization.ipynb includes the visual analysis of the VIST data
   * qualitative, quantitative folder contains visual analysis results (figures)
