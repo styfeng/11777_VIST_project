@@ -13,6 +13,11 @@ Python 3.6 or 2.7<br>
 
 <br>
 
+### Running on VIST
+For training and generating test results for our VIST project, please refer to the Run_Glac.ipynb file in the parent directory.
+
+<br>
+
 ### Prerequisites
 
 ##### 1. Clone the repository
@@ -35,8 +40,6 @@ python3
 ```
 
 <br>
-### Running on VIST
-For training and generating test results for our VIST project, please refer to the Run_Glac.ipynb file in the parent directory.
 
 ### Preprocessing
 
