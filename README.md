@@ -33,3 +33,6 @@ pip install opencv-python nltk plotly bokeh seaborn imageio
 ### uniModalVis
   * vis_visualization.ipynb includes the visual analysis of the VIST data
   * qualitative, quantitative folder contains visual analysis results (figures)
+
+### seq2seq
+  * This folder contains all the code and scripts for the seq2seq approach (including T5 training and inference + evaluation and a script for data preprocessing, extracting keyphrases/keywords from captions using YAKE, and trying PEGASUS summarization on the captions)
